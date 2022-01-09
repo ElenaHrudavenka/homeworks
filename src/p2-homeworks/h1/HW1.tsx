@@ -1,12 +1,12 @@
 import React from 'react'
 import Message from "./Message";
 
-export type messagePropsType = {
-    avatar: string
-    name: string
-    message:string
-    time:string
-}
+// export type messagePropsType = {
+//     avatar: string
+//     name: string
+//     message: string
+//     time: string
+// }
 
 const HW1 = () => {
     const messageData = {
