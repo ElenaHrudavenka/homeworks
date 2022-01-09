@@ -2,3 +2,10 @@
     max-block-size: 500px;
 }
 
+.img {
+    border-radius: 50%;
+    height: auto;
+    width:auto;
+    max-height: 80px;
+    max-width: 80px;
+}
