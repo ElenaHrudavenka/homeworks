@@ -1,11 +1,47 @@
-.message_box {
+.message_box_grid {
+    display: grid;
+    grid-template-columns: 1fr 20px 4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /*grid-gap: 1vw;*/
+    grid-template-areas:
+"ava tr name t"
+"ava tr text t"
+"ava tr text time";
+
+    width: 400px;
+    height: auto;
     max-block-size: 500px;
+    background-color: dimgray;
+    border: 1px solid black;
+}
+
+.img_block {
+    grid-area: ava;
+    background-color: greenyellow;
 }
 
 .img {
     border-radius: 50%;
     height: auto;
-    width:auto;
+    width: auto;
     max-height: 80px;
     max-width: 80px;
+}
+
+.message_name {
+    grid-area: name;
+    /*vertical-align: top;*/
+    background-color: aqua;
+}
+
+.message_text {
+    grid-area: text;
+    /*vertical-align: top;*/
+    background-color: coral;
+}
+
+.message_time {
+    grid-area: time;
+    background-color: darkslategrey;
+    text-align: center;
 }
