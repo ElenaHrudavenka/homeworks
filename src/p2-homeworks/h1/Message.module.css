@@ -15,6 +15,11 @@
     border: 1px solid black;
 }
 
+.background {
+    background: url(https://klv-oboi.ru/img/gallery/104/thumbs/thumb_l_psh_00005084.jpg) top left /500px 500px repeat;
+
+}
+
 .img_block {
     grid-area: ava;
     background-color: greenyellow;
