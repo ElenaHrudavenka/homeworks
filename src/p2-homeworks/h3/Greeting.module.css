@@ -5,3 +5,7 @@
 .error {
     border: 1px solid red;
 }
+
+.notError {
+    border: 1px solid blue;
+}
