@@ -1,52 +1,75 @@
 .message_box_grid {
+    margin-left: 10px;
+    border-radius: 20px 20px 20px 20px;
     display: grid;
-    grid-template-columns: 1fr 20px 4fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 80px 10px 4fr 1fr;
+    grid-template-rows: 50px 1fr 40px 10px;
     /*grid-gap: 1vw;*/
     grid-template-areas:
-"ava tr name t"
-"ava tr text t"
-"ava tr text time";
-
+"a ots name t"
+"ava ots text t"
+"tr tr text time"
+"b b b b";
     width: 400px;
     height: auto;
     max-block-size: 500px;
     background-color: dimgray;
-    border: 1px solid black;
+    border: 3px solid black;
 }
 
 .background {
     background: url(https://klv-oboi.ru/img/gallery/104/thumbs/thumb_l_psh_00005084.jpg) top left /500px 500px repeat;
-
 }
 
 .img_block {
     grid-area: ava;
-    background-color: greenyellow;
+    /*background-color: greenyellow;*/
 }
 
 .img {
     border-radius: 50%;
+    border: 2px solid black;
     height: auto;
     width: auto;
     max-height: 80px;
     max-width: 80px;
-}
 
+    }
+.triangle {
+    grid-area: tr;
+    background-color: white;
+}
+.circle {
+    grid-area: tr;
+    width: 90px;
+    height: auto;
+    border-bottom-right-radius: 60px;
+    background-color: dimgray;
+}
 .message_name {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 10px;
+    padding-left: 10px;
     grid-area: name;
     /*vertical-align: top;*/
-    background-color: aqua;
+    background-color: white;
 }
 
 .message_text {
+    padding-left: 10px;
     grid-area: text;
     /*vertical-align: top;*/
-    background-color: coral;
+    background-color: white;
+    border-bottom-right-radius: 20px;
 }
 
 .message_time {
+    color: white;
+    /*Числовое значение от 100 до 900	От очень тонкого до очень жирного шрифта*/
+    font-weight: 500;
+    font-size: 1.2em;
     grid-area: time;
-    background-color: darkslategrey;
+   /* background-color: darkslategrey;*/
     text-align: center;
 }
