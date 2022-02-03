@@ -1,5 +1,6 @@
 import React from 'react'
 import { AffairType } from './HW2'
+import glStyle from './../../../src/p1-main/m1-ui/u1-app/App.module.css'
 
 type AffairPropsType = {
     // key не нужно типизировать
@@ -15,7 +16,7 @@ function Affair(props: AffairPropsType) {
     return (
         <div>
             {props.affair.name} {props.affair.priority}
-            <button onClick={deleteCallback}>X</button>
+            <button onClick={deleteCallback} className = {glStyle.button_x}>X</button>
         </div>
     )
 }

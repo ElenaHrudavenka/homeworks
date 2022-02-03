@@ -4,8 +4,20 @@
 
 .error {
     border: 1px solid red;
+    margin-right: 3px;
+    padding: 8px;
 }
 
 .notError {
     border: 1px solid blue;
+    margin-right: 3px;
+    padding: 5px;
+}
+.span {
+    background-color: white;
+    border-radius: 3px 3px 3px 3px;
+    border: 1px solid black;
+    padding: 10px;
+    font-weight: 500;
+    margin: 20px;
 }

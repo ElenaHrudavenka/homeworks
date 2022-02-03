@@ -1,5 +1,6 @@
 import React, {ChangeEvent} from 'react'
 import s from './Greeting.module.css'
+import glStyle from './../../../src/p1-main/m1-ui/u1-app/App.module.css'
 
 type GreetingPropsType = {
     name: string // need to fix any
@@ -16,11 +17,11 @@ const Greeting: React.FC<GreetingPropsType> = (
     const inputClass = error ? s.error : s.notError // need to fix with (?:)
 
     return (
-        <div>
+        <div className={glStyle.box}>
             <input value={name} onChange={setNameCallback} className={inputClass}/>
-            <span>{error}</span>
-            <button onClick={addUser}>add</button>
-            <span>{totalUsers}</span>
+            <button onClick={addUser} className={glStyle.button}>add</button>
+            <span className={s.span}>{totalUsers}</span>
+            <span className={error?s.span:""}>{error}</span>
         </div>
     )
 }
