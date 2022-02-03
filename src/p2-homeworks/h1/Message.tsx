@@ -24,6 +24,8 @@ const Message = (props: MessagePropsType) => {
             <div className={s.message_time}>
                 <p>{props.time}</p>
             </div>
+            <div className={s.triangle}></div>
+            <div className={s.circle}></div>
         </div>
     )
 }
