@@ -30,7 +30,7 @@ function Routings() {
             {/*<Route path={'/'} exact render={() => <Redirect to={PATH.PRE_JUNIOR}/>}/>*/}
 
             {/*<Route path={PATH.PRE_JUNIOR} render={() => <PreJunior/>}/>*/}
-                // add routes
+                // add routes 1111
 
             {/*у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
             {/*<Route render={() => <Error404/>}/>*/}
