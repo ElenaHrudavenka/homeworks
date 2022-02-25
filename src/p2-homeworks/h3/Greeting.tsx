@@ -18,10 +18,11 @@ const Greeting: React.FC<GreetingPropsType> = (
 
     return (
         <div className={glStyle.box}>
+            <div>Enter your name: </div>
             <input value={name} onChange={setNameCallback} className={inputClass}/>
             <button onClick={addUser} className={glStyle.button}>add</button>
             <span className={s.span}>{totalUsers}</span>
-            <span className={error?s.span:""}>{error}</span>
+            <div className={error?s.span:""}>{error&&"Field must be filled. Please, enter your name."}</div>
         </div>
     )
 }
