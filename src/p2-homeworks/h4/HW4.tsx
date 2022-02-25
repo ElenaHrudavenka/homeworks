@@ -4,16 +4,30 @@ import s from './HW4.module.css'
 import glStyle from './../../../src/p1-main/m1-ui/u1-app/App.module.css'
 import SuperButton from './common/c2-SuperButton/SuperButton'
 import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
+import withReactContent from "sweetalert2-react-content";
+import Swal from 'sweetalert2'
 
 function HW4() {
     const [text, setText] = useState<string>('')
     const error = text ? '' : 'ERROR! You must enter a value'
 
+    // const MySwal = withReactContent(Swal)
+
     const showAlert = () => {
         if (error) {
-            alert('введите текст...')
+            /*alert('введите текст...')*/
+            withReactContent(Swal).fire({
+                title: <strong>You clicked the button!</strong>,
+                html: <i>The input field must not be empty.</i>,
+                icon: "error"
+            })
         } else {
-            alert(text) // если нет ошибки показать текст
+            /*alert(text) // если нет ошибки показать текст*/
+            withReactContent(Swal).fire({
+                title: <strong>Your registration has been successfully completed!</strong>,
+                html: <i>You clicked the button!</i>,
+                icon: "success"
+            })
         }
     }
 
@@ -26,6 +40,7 @@ function HW4() {
             <h3 className={glStyle.title}>homeworks 4</h3>
 
             <div className={`${glStyle.box} ${s.column}`}>
+                <span>Enter data in the input field: </span>
                 <SuperInputText
                     value={text}
                     onChangeText={setText}
@@ -48,7 +63,7 @@ function HW4() {
                     red // пропсу с булевым значением не обязательно указывать true
                     onClick={showAlert}
                 >
-                    delete {/*// название кнопки попадёт в children*/}
+                    register {/*// название кнопки попадёт в children*/}
                 </SuperButton>
 
                 <SuperButton disabled>

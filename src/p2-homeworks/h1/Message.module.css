@@ -18,7 +18,8 @@
 }
 
 .background {
-    background: url(https://klv-oboi.ru/img/gallery/104/thumbs/thumb_l_psh_00005084.jpg) top left /500px 500px repeat;
+    /*background: url(https://klv-oboi.ru/img/gallery/104/thumbs/thumb_l_psh_00005084.jpg) top left /500px 500px repeat;*/
+    background: url(../../p1-main/m1-ui/u1-app/img/background.jpg) top left /500px 500px repeat;
 }
 
 .img_block {

@@ -8,22 +8,6 @@ function Header() {
 
     return (
         <div className={s.section}>
-            {/* {visibleMenu &&
-                <nav>
-                    <NavLink to={'/pre-junior'}>
-                        <button>PreJunior</button>
-                    </NavLink>
-                    <NavLink to={'/junior'}>
-                        <button>Junior</button>
-                    </NavLink>
-                    <NavLink to={'/junior-plus'}>
-                        <button>JuniorPlus</button>
-                    </NavLink>
-                </nav>
-            }
-            <a href="#" className={s.menuBtn}>
-                <span></span>
-            </a>*/}
             {visibleMenu ?
                 <>
                     <nav>
@@ -45,7 +29,6 @@ function Header() {
                     <span></span>
                 </a>
             }
-
         </div>
     )
 }

@@ -1,6 +1,8 @@
 import React, {useState, ChangeEvent} from 'react'
 import Greeting from './Greeting'
 import {UserType} from './HW3'
+import withReactContent from "sweetalert2-react-content";
+import Swal from "sweetalert2";
 
 
 type GreetingContainerPropsType = {
@@ -23,7 +25,12 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const addUser = () => {
         if (name.trim().length >= 1) {
             addUserCallback(name)
-            alert(`Hello ${name} !`) // need to fix
+            /*alert(`Hello ${name} !`) // need to fix*/
+            withReactContent(Swal).fire({
+                title: <strong>Thanks! Your vote has been counted.</strong>,
+                html: <i>Hello {name} !</i>,
+                icon: "success"
+            })
             setName('')
             setError('')
         } else {

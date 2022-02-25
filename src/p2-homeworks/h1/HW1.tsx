@@ -4,8 +4,8 @@ import s from './Message.module.css'
 import glStyle from './../../../src/p1-main/m1-ui/u1-app/App.module.css'
 
 const messageData = {
-    // avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
-    avatar: 'https://99px.ru/sstorage/1/2021/06/image_10306212231014024654.gif',
+    /*avatar: 'https://99px.ru/sstorage/1/2021/06/image_10306212231014024654.gif',*/
+    avatar: require('./img/avatar.gif'),
     name: 'Kisseli',
     message: 'Крик души! Как же мне не хватает знания верски. Адские муки!!!',
     time: '22:00',
