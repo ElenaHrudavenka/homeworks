@@ -1,6 +1,6 @@
 import React from 'react'
 import { AffairType } from './HW2'
-import glStyle from './../../../src/p1-main/m1-ui/u1-app/App.module.css'
+import s from './Affairs.module.css'
 
 type AffairPropsType = {
     // key не нужно типизировать
@@ -14,9 +14,10 @@ function Affair(props: AffairPropsType) {
     }    // need to fix
 
     return (
-        <div>
-            {props.affair.name} {props.affair.priority}
-            <button onClick={deleteCallback} className = {glStyle.button_x}>X</button>
+        <div className={s.affairs_box_grid}>
+            <span className={s.name}>{props.affair.name}</span>
+            <span className={s.priority}>{props.affair.priority}</span>
+            <button onClick={deleteCallback} className = {s.button_delete}>X</button>
         </div>
     )
 }

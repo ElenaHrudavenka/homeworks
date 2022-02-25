@@ -1,3 +1,65 @@
 .someClass {
 
 }
+.affairs_box_grid {
+    border: 1px dotted  #e5e5e5;
+    display: grid;
+    grid-template-columns: 5fr 2fr 40px;
+    grid-template-areas: "name priority btn";
+}
+.name {
+    grid-area: name;
+    padding: 2px 20px 2px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.priority {
+    grid-area: priority;
+    font-size: 1.2em;
+}
+/*Buttons X*/
+.button_delete {
+    grid-area: btn;
+    margin-top: 3px;
+    margin-right: 5px;
+    height: 25px;
+    vertical-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    color: #282c34;
+    transition: all 0.5s;
+    position: relative;
+}
+.button_delete::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+}
+.button_delete:hover::before {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+}
+.button_delete::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transform: scale(1.6, 1.6);
+}
+.button_delete:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+}
